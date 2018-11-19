@@ -1,7 +1,7 @@
 <template>
     <div class="hello">
         <h1>{{ msg }}</h1>
-        <router-link to="/login">Navigate to Login</router-link>
+        <router-link to="/">Log me out!</router-link>
     </div>
 </template>
 
@@ -10,7 +10,7 @@
         name: 'home',
         data () {
             return {
-                msg: 'Welcome to Your Vue.js Home Page'
+                msg: "you just got logged in! :)"
             }
         }
     }

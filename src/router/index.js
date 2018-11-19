@@ -10,13 +10,13 @@ export default new Router({
     routes: [
         {
             path: "/",
-            name: 'home',
-            component: home
-        },
-        {
-            path: '/login',
             name: 'login',
             component: login
+        },
+        {
+            path: '/home',
+            name: 'home',
+            component: home
         }
     ]
 })
