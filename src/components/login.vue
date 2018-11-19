@@ -35,20 +35,12 @@
 </script>
 
 <style scoped>
-<<<<<<< HEAD
-
-=======
->>>>>>> f01425fae5a4dc5d683c1f04788f7833d7448719
 #btn-login {
     width: 426px;
     height: 51px;
     border-radius: 10px;
     text-transform: none;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> f01425fae5a4dc5d683c1f04788f7833d7448719
 #btn-login-text {
   width: 41px;
   height: 14px;
@@ -62,10 +54,6 @@
   text-align: left;
   color: #fefcfc;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> f01425fae5a4dc5d683c1f04788f7833d7448719
 #background {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,5c0009+50,000000+100 */
     background: rgb(0,0,0); /* Old browsers */
@@ -74,9 +62,5 @@
     background: linear-gradient(135deg, rgba(0,0,0,1) 0%,rgba(92,0,9,1) 50%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
-<<<<<<< HEAD
 
 </style>
-=======
-</style>
->>>>>>> f01425fae5a4dc5d683c1f04788f7833d7448719

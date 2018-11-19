@@ -1,14 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <v-layout justify-space-around>
-    <v-icon small> mdi_outline_home</v-icon>
-
-    <h1>{{ msg }}</h1>
-        <router-link to="/">Log me out!</router-link>
-
-  </v-layout>
-  
-=======
     <v-app id="inspire">
     <v-navigation-drawer
       dark class ="primary"
@@ -87,7 +77,6 @@
       <span class="ml-3 white--text">&copy; 2018</span>
     </v-footer>
   </v-app>
->>>>>>> f01425fae5a4dc5d683c1f04788f7833d7448719
 </template>
 
 
