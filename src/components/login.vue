@@ -10,7 +10,7 @@
               <v-form>
                 <v-text-field solo autocomplete="off" append-icon="perm_identity" name="login" label="E-mail Address"
                   type="text"></v-text-field>
-                <v-text-field solo append-icon="lock" name="password" label="Password" type="password"></v-text-field>
+                <v-text-field solo append-icon="lock" name="password" label="Pasasword" type="password"></v-text-field>
               </v-form>
               <v-btn depressed :loading="loading" id="btn-login" class="px-0" block color="#00A230" @click="loader = 'loading'">Log-in</v-btn>
 
@@ -29,12 +29,12 @@
     <v-footer height="auto">
       <v-layout justify-center row wrap>
         <v-flex xs12>
-        <v-card height="50px" style="background: #383838;" flat tile class="lighten-1 white--text text-xs-center">
-          <v-card-text>
-            <!-- <img class="mx-1" src="@/assets/facebook.png" alt="" height=4% width=4% >
-          <img class="mx-1" src="@/assets/instagram.png" alt="" height=4% width=4% >
-          <img class="mx-1" src="@/assets/twitter.png" alt="" height=4% width=4%>
-          <img class="mx-1" src="@/assets/cellphone.png" alt="" height=4% width=4%>-->
+        <v-card height="53px" style="background: #383838;" flat tile class="lighten-1 white--text text-xs-center">
+          <v-card-text class="pt-2">
+          <img class="social-icon" id="social-icon" src="@/assets/facebook-grey.png" alt="">
+          <img class="social-icon" id="social-icon" src="@/assets/instagram-grey.png" alt="">
+          <img class="social-icon" id="social-icon" src="@/assets/twitter-grey.png" alt="">
+          <img class="social-icon" id="social-icon" src="@/assets/cellphone-grey.png" alt="">
           </v-card-text>
         </v-card>
         </v-flex>
@@ -85,7 +85,18 @@
     margin-left: auto;
     margin-right: auto;
   }
+  #social-icon{
+   height: 38px;
+   width: 38;
+   margin: 0 5px 0 5px;
+  }  
 
+  .social-icon:hover{
+      opacity: 0.5;
+      filter: alpha(opacity=50);
+  }
+
+  
   #btn-login {
     height: 45px;
     border-radius: 7px;
