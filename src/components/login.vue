@@ -4,21 +4,22 @@
       <v-container fluid fill-height>
         <v-layout align-center justify-center>
           <v-flex xs12 sm8 md4>
-            <v-card flat color="transparent" width="426px">
+
+            <v-card flat color="transparent">
               <img id="logo" class="mb-5" src="@/assets/logo.png" alt="">
               <v-form>
                 <v-text-field solo autocomplete="off" append-icon="perm_identity" name="login" label="E-mail Address"
                   type="text"></v-text-field>
                 <v-text-field solo append-icon="lock" name="password" label="Password" type="password"></v-text-field>
               </v-form>
-              <v-btn depressed :loading="loading" id="btn-login" class="px-0" block color="#00A230" @click="loader = 'loading'">Log
-                in</v-btn>
+              <v-btn depressed :loading="loading" id="btn-login" class="px-0" block color="#00A230" @click="loader = 'loading'">Log-in</v-btn>
 
 
               <v-card-text class="text1 text-xs-center">The blood you donate gives someone another chance at life.</v-card-text>
               <v-card-text class="text2 text-xs-center py-0">Give the gift of life</v-card-text>
               <v-card-text class="text3 text-xs-center">Donate blood</v-card-text>
             </v-card>
+
           </v-flex>
 
         </v-layout>
