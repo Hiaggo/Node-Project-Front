@@ -5,7 +5,9 @@
       <v-container fluid fill-height color="primary">
         <v-layout align-center justify-center>
           <v-flex xs12 sm8 md4>
+            
             <v-card flat color="transparent" dark>
+              <img id="logo" class="mb-3" src="@/assets/logo.png" alt="">
               <v-card-text>
                 <v-form>
                   <v-text-field append-icon="perm_identity" name="login" label="E-mail Address" type="text"></v-text-field>
@@ -35,6 +37,15 @@
 </script>
 
 <style scoped>
+
+#logo {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #btn-login {
     width: 426px;
     height: 51px;
