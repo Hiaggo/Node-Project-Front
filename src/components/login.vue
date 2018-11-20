@@ -10,19 +10,46 @@
               <img id="logo" class="mb-3" src="@/assets/logo.png" alt="">
               <v-card-text>
                 <v-form>
-                  <v-text-field append-icon="perm_identity" name="login" label="E-mail Address" type="text"></v-text-field>
-                  <v-text-field id="password" append-icon="lock" name="password" label="Password" type="password"></v-text-field>
+                  <v-text-field append-icon="perm_identity" name="login" label="Endereço de E-mail" type="text"></v-text-field>
+                  <v-text-field id="password" append-icon="lock" name="password" label="Senha" type="password"></v-text-field>
                 </v-form>
               </v-card-text>
               <v-card-actions>
-                <v-btn id="btn-login" block color="#00A230"><div id="btn-login-text">Log in</div></v-btn>
+                <v-btn id="btn-login" block color="#00A230"><div id="btn-login-text">Entrar</div></v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
         </v-layout>
       </v-container>
     </v-content>
+
+    <v-footer
+      dark
+      height="auto"
+    >
+      <v-card
+        flat
+        tile
+        class="grey darken-4 lighten-1 white--text text-xs-center"
+      >
+        <v-card-text class="grey darken-3 pb-2 pt-3">
+          <img class="mx-1" src="@/assets/facebook.png" alt="" height=4% width=4% >
+          <img class="mx-1" src="@/assets/instagram.png" alt="" height=4% width=4% >
+          <img class="mx-1" src="@/assets/twitter.png" alt="" height=4% width=4%>
+          <img class="mx-1" src="@/assets/cellphone.png" alt="" height=4% width=4%>
+        </v-card-text>
+
+        <v-divider></v-divider>
+
+        <v-card-text class="white--text pt-4">
+          Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        </v-card-text>
+
+      </v-card>
+    </v-footer>
+
   </v-app>
+
 </template>
 
 <script>
@@ -54,9 +81,8 @@
 }
 #btn-login-text {
   width: 41px;
-  height: 14px;
   font-family: Arial;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
