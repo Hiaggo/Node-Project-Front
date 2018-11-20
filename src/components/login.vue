@@ -7,10 +7,12 @@
             <v-card flat color="transparent" width="426px">
               <img id="logo" class="mb-5" src="@/assets/logo.png" alt="">
               <v-form>
-                <v-text-field solo autocomplete="off" append-icon="perm_identity" name="login" label="E-mail Address" type="text"></v-text-field>
+                <v-text-field solo autocomplete="off" append-icon="perm_identity" name="login" label="E-mail Address"
+                  type="text"></v-text-field>
                 <v-text-field solo append-icon="lock" name="password" label="Password" type="password"></v-text-field>
               </v-form>
-              <v-btn depressed :loading="loading" id="btn-login" class="px-0" block color="#00A230" @click="loader = 'loading'">Log in</v-btn>
+              <v-btn depressed :loading="loading" id="btn-login" class="px-0" block color="#00A230" @click="loader = 'loading'">Log
+                in</v-btn>
 
 
               <v-card-text class="text1 text-xs-center">The blood you donate gives someone another chance at life.</v-card-text>
@@ -18,9 +20,38 @@
               <v-card-text class="text3 text-xs-center">Donate blood</v-card-text>
             </v-card>
           </v-flex>
+
         </v-layout>
       </v-container>
     </v-content>
+
+    <v-footer height="auto">
+      <v-layout justify-center row wrap>
+        <v-flex xs12>
+        <v-card height="50px" style="background: #383838;" flat tile class="lighten-1 white--text text-xs-center">
+          <v-card-text>
+            <!-- <img class="mx-1" src="@/assets/facebook.png" alt="" height=4% width=4% >
+          <img class="mx-1" src="@/assets/instagram.png" alt="" height=4% width=4% >
+          <img class="mx-1" src="@/assets/twitter.png" alt="" height=4% width=4%>
+          <img class="mx-1" src="@/assets/cellphone.png" alt="" height=4% width=4%>-->
+          </v-card-text>
+        </v-card>
+        </v-flex>
+        <v-flex xs12>
+          <v-card height="180px" style="background: #212121;" flat tile class="lighten-1 white--text text-xs-center">
+          <v-card-text>
+          </v-card-text>
+        </v-card>
+        </v-flex>
+        <v-flex xs12>
+          <v-card height="30px" style="background: #151515;" flat tile class="lighten-1 white--text text-xs-center pb-0">
+          <v-card-text>
+          </v-card-text>
+        </v-card>
+        </v-flex>
+      </v-layout>     
+    </v-footer>
+
   </v-app>
 </template>
 
@@ -47,8 +78,8 @@
 
 <style scoped>
   #logo {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -104,39 +135,38 @@
   }
 
   .text1 {
-  font-family: Arial;
-  font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: #ffffff;
-}
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+  }
 
-.text2 {
-  font-family: Arial;
-  font-size: 14px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: #ffffff;
-}
+  .text2 {
+    font-family: Arial;
+    font-size: 17px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+  }
 
-.text3 {
-  font-family: Arial;
-  font-size: 15.5px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: #ffffff;
-}
-
+  .text3 {
+    font-family: Arial;
+    font-size: 15.5px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+  }
 </style>
