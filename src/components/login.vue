@@ -38,18 +38,47 @@
           </v-card-text>
         </v-card>
         </v-flex>
+       
+        <v-flex style="background: #383838;" xs4 pl-2 >
+            <v-card dark height="180px" tile flat color="#212121" >
+              <v-card-title class="text2">About Us</v-card-title>
+              <v-card-text class="text1">Lorem Ipsum is simply dummy text of the printing 
+              and typesetting industry. Lorem Ipsum has been 
+              the industry&apos;s standard dummy text ever since the 
+              1500s, when an unknown printer took a galley of type 
+              and scrambled it to make a type specimen book.
+              </v-card-text>
+            </v-card>
+          </v-flex>
+
+          <v-flex style="background: #383838;" xs4 pl-1 pr-1>
+            <v-card dark height="180px" tile flat color="#212121">
+              <v-card-title class="text2">Our Agency</v-card-title>
+              <v-card-text class="text1">Av. Gal. Milton Tavares de Souza, s/nº
+              São Domingos - Niterói - RJ
+              CEP: 24210-346
+              </v-card-text>
+            </v-card>
+          </v-flex>
+          
+          <v-flex style="background: #383838;" xs4 pr-2>
+            <v-card dark height="180px" tile flat color="#212121">
+              <v-card-title class="text2">Contact Us</v-card-title>
+              <v-card-text class="text1">Cellphone: (21)92222-2011
+              Whatsapp: (21)91111-4022
+
+              contact@id.uf.br
+              </v-card-text>
+            </v-card>
+          </v-flex>
+
         <v-flex xs12>
-          <v-card height="180px" style="background: #212121;" flat tile class="lighten-1 white--text text-xs-center">
+          <v-card height="30px" style="background: #383838;" flat tile class="lighten-1 white--text text-xs-center pb-0">
           <v-card-text>
           </v-card-text>
         </v-card>
         </v-flex>
-        <v-flex xs12>
-          <v-card height="30px" style="background: #151515;" flat tile class="lighten-1 white--text text-xs-center pb-0">
-          <v-card-text>
-          </v-card-text>
-        </v-card>
-        </v-flex>
+
       </v-layout>     
     </v-footer>
 
@@ -181,4 +210,10 @@
     text-align: left;
     color: #ffffff;
   }
+
+  .Line-Separator {
+  width: 2px;
+  height: 171px;
+  background-color: #383838;
+}
 </style>
