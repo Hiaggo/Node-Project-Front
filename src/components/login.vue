@@ -8,11 +8,11 @@
             <v-card flat color="transparent">
               <img id="logo" class="mb-5" src="@/assets/logo.png" alt="">
               <v-form>
-                <v-text-field solo autocomplete="off" append-icon="perm_identity" name="login" label="E-mail Address"
+                <v-text-field solo autocomplete="off" append-icon="perm_identity" name="login" label="Endereço de e-mail"
                   type="text"></v-text-field>
-                <v-text-field solo append-icon="lock" name="password" label="Pasasword" type="password"></v-text-field>
+                <v-text-field solo append-icon="lock" name="password" label="Senha" type="password"></v-text-field>
               </v-form>
-              <v-btn depressed :loading="loading" id="btn-login" class="px-0" block color="#00A230" @click="loader = 'loading'">Log-in</v-btn>
+              <v-btn depressed :loading="loading" id="btn-login" class="px-0" block color="#00A230" @click="loader = 'loading'">Entrar</v-btn>
 
 
               <v-card-text class="text1 text-xs-center">The blood you donate gives someone another chance at life.</v-card-text>
