@@ -1,18 +1,48 @@
 <template>
-    <v-app id="inspire" >
-    <v-navigation-drawer
+    <v-app id="inspire">
 
+    <v-toolbar clipped-left flat height=125px dark color="#600000" fixed app>
+
+      <img id="logo" src="@/assets/logo.png" alt="">
+     
+      <v-spacer></v-spacer>
+
+      <v-card height=120px color="#300000" flat>
+        <flex flex-end>
+          <v-btn icon height="15">
+            <v-icon>local_hospital</v-icon>
+          </v-btn>
+
+          <v-btn icon>
+            <v-icon>healing</v-icon>
+          </v-btn>
+
+          <v-btn icon>
+            <v-icon>hotel</v-icon>
+          </v-btn>
+        </flex>
+
+        <flex>
+          <br><br><br>
+          <span>Whitehavfasfassadsaden Beach</span><br> 
+        </flex>
+
+      </v-card>    
+    </v-toolbar>
+
+    <v-navigation-drawer
       dark style="background: #770404"
       permanent
       v-model="drawer"
       fixed
-      width ="210"
+      floating
+      width ="205"
       app
-
+      clipped
       >
-      <v-list dense>
-        <img id="logo" class="my-5" src="@/assets/logo.png" alt="">
-        
+
+      <v-list class="list__tile__title">
+
         <v-list-tile class="mouse-opacidade" @click="">
           <v-list-tile-action>
             <v-icon>home</v-icon>
@@ -67,9 +97,9 @@
           </v-list-tile-content>
         </v-list-tile>
 
-        <v-footer color="#600000" height=53px dark fixed >
-          <v-card height="53px" flat tile color="#600000">
-            <v-card-text class="pt-2 ml-2">
+        <v-footer color="#600000" height=70px dark fixed >
+          <v-card flat tile color="#600000">
+            <v-card-text height=100% class="pt-3 ml-1">
               <img class="mouse-opacidade" id="social-icon" src="@/assets/facebook.png" alt="">
               <img class="mouse-opacidade" id="social-icon" src="@/assets/instagram.png" alt="">
               <img class="mouse-opacidade" id="social-icon" src="@/assets/twitter.png" alt="">
@@ -80,9 +110,6 @@
 
       </v-list>
     </v-navigation-drawer>
-
-    <v-toolbar dark color="#770404" fixed app>
-    </v-toolbar>
 
     <v-content>
       <v-container fluid fill-height>
@@ -96,9 +123,11 @@
         </v-layout>
       </v-container>
     </v-content>
+<!--
     <v-footer color="#600000" dark fixed app>
       <span class="ml-3 white--text">&copy; 2018</span>
     </v-footer>
+-->
   </v-app>
 </template>
 
@@ -120,11 +149,9 @@
 
 <style scoped>
   #logo {
-    width: 81px;
-    height: 81px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 90px;
+    height: 90px;
+    margin-left: 40px;
   }
 
   #social-icon{
@@ -137,4 +164,5 @@
       opacity: 0.7;
       background: rgba(0 ,0 ,0, 0.5);
   }
+
 </style>
