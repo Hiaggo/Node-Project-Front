@@ -106,7 +106,17 @@
           </v-list-tile-content>
         </v-list-tile>
 
-        <v-footer color="#600000" height=70px dark fixed >
+
+
+        <v-footer color="#600000" height=112px dark fixed >
+          <v-card dark height="110px" width="205px" tile color="#770404">
+            <v-card-actions>
+              <v-btn block href="/" flat >Log-out</v-btn>              
+            </v-card-actions>
+          </v-card>
+        </v-footer>
+
+        <v-footer color="#600000" height=65px dark fixed >
           <v-card flat tile color="#600000">
             <v-card-text height=100% class="pt-3 ml-1">
               <img class="mouse-opacidade" id="social-icon" src="@/assets/facebook.png" alt="">
@@ -131,12 +141,10 @@
           <img height=430px  width=436px src="@/assets/help-to-fill.png" alt="">
           </v-flex> 
 
-          <v-flex text-xs-center style=" font-size: 16px";>Did you know one blood donation can save up to three lives?
+          <v-flex text-xs-center style=" font-size: 16px";>Did you know one blood donation can save up to three lives?<br>Do something amazing. Give blood.
           </v-flex>
 
-          <v-flex text-xs-center style=" font-size: 16px";>Do something amazing. Give blood.
-
-          <v-btn dark href="/login" target="_blank" depressed :loading="loading" id="btn-login" class="px-0" block color="#770404" @click="loader = 'loading'">Become a donator right now</v-btn>
+          <v-btn dark href="/" target="_blank" depressed :loading="loading" id="btn-login" style="width:250px" color="#770404" @click="loader = 'loading'">Become a donator right now</v-btn>
 
           </v-flex>
         </v-layout>
