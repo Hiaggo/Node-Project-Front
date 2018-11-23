@@ -1,34 +1,40 @@
 <template>
     <v-app id="inspire">
-
-    <v-toolbar clipped-left flat height=125px dark color="#600000" fixed app>
-
-      <img id="logo" src="@/assets/logo.png" alt="">
-     
+      
+    <v-toolbar  height=61px color="#770404" dark extended fixed app>
+      <v-toolbar-side-icon></v-toolbar-side-icon>
       <v-spacer></v-spacer>
 
-      <v-card height=120px color="#300000" flat>
-        <flex flex-end>
-          <v-btn icon height="15">
-            <v-icon>local_hospital</v-icon>
-          </v-btn>
+      <v-btn icon>
+        <v-icon>local_hospital</v-icon>
+      </v-btn>
 
-          <v-btn icon>
-            <v-icon>healing</v-icon>
-          </v-btn>
+      <v-btn icon>
+        <v-icon>healing</v-icon>
+      </v-btn>
 
-          <v-btn icon>
-            <v-icon>hotel</v-icon>
-          </v-btn>
-        </flex>
+      <v-btn icon>
+        <v-icon>hotel</v-icon>
+      </v-btn>
 
-        <flex>
-          <br><br><br>
-          <span>Whitehavfasfassadsaden Beach</span><br> 
-        </flex>
+      <v-toolbar-title slot="extension" style="text-align:right" class="white--text">
+    
+        <v-flex style="background: #383838;">
+          <v-card dark height="0px" tile flat color="#212121">
+            <v-card-text class="text1">
+              ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            </v-card-text>
+          </v-card>
+        </v-flex> 
 
-      </v-card>    
+        <v-card dark height=60 tile flat color="#770404">
+          <v-card-text class="text-xs-right" style=" font-size: 13px">Welcome ser humaninho<br>IP Address: 192.168.1.1
+          </v-card-text>
+        </v-card>
+
+      </v-toolbar-title>
     </v-toolbar>
+
 
     <v-navigation-drawer
       dark style="background: #770404"
@@ -36,11 +42,14 @@
       v-model="drawer"
       fixed
       floating
-      width ="205"
+      width="205"
       app
-      clipped
       >
 
+      <v-card height=121px color="#600000">
+        <img id="logo" style="margin-left: 55px" src="@/assets/logo.png" alt="">
+      </v-card>
+      
       <v-list class="list__tile__title">
 
         <v-list-tile class="mouse-opacidade" @click="">
@@ -113,25 +122,29 @@
 
     <v-content>
       <v-container fluid fill-height>
-        <v-layout
-          justify-center
-          align-center
-        >
-          <v-flex text-xs-center>
-            
+        <v-layout align-center justify-center column fill-height>
+
+          <v-flex text-xs-center style=" font-size: 20px";>You don’t have to be a doctor to save lives
+          </v-flex>
+
+          <v-flex text-xs-center> 
+          <img height=430px  width=436px src="@/assets/help-to-fill.png" alt="">
+          </v-flex> 
+
+          <v-flex text-xs-center style=" font-size: 16px";>Did you know one blood donation can save up to three lives?
+          </v-flex>
+
+          <v-flex text-xs-center style=" font-size: 16px";>Do something amazing. Give blood.
+
+          <v-btn dark href="/login" target="_blank" depressed :loading="loading" id="btn-login" class="px-0" block color="#770404" @click="loader = 'loading'">Become a donator right now</v-btn>
+
           </v-flex>
         </v-layout>
       </v-container>
     </v-content>
-<!--
-    <v-footer color="#600000" dark fixed app>
-      <span class="ml-3 white--text">&copy; 2018</span>
-    </v-footer>
--->
+
   </v-app>
 </template>
-
-
 
 <script>
     export default {
@@ -148,10 +161,28 @@
 </script>
 
 <style scoped>
+  
+  #btn-login {
+    height: 45px;
+    border-radius: 7px;
+    text-transform: none;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fefcfc;
+  }
+
   #logo {
     width: 90px;
     height: 90px;
-    margin-left: 40px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 16px;
   }
 
   #social-icon{
