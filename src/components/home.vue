@@ -113,9 +113,9 @@
 
 
         <v-footer color="#600000" height=112px dark fixed >
-          <v-card dark height="110px" width="205px" tile color="#770404">
-            <v-card-actions>
-              <v-btn block href="/" flat >Log-out</v-btn>              
+          <v-card dark router to="/" class="mouse-opacidade-logout" height="110px" width="205px" tile color="#770404">
+            <v-card-actions style="margin-left: 57px; margin-top: 4px; font-weight: bold; font-size: 15px; font-family: Arial">
+              LOG-OUT
             </v-card-actions>
           </v-card>
         </v-footer>
@@ -209,6 +209,11 @@
 
   .mouse-opacidade:hover{
       opacity: 0.7;
+      background: rgba(0 ,0 ,0, 0.5);
+  }
+
+  .mouse-opacidade-logout:hover{
+      opacity: 0.4;
       background: rgba(0 ,0 ,0, 0.5);
   }
 

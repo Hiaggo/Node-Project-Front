@@ -113,9 +113,9 @@
 
 
         <v-footer color="#600000" height=112px dark fixed >
-          <v-card dark height="110px" width="205px" tile color="#770404">
-            <v-card-actions>
-              <v-btn block href="/" flat >Log-out</v-btn>              
+          <v-card dark router to="/" class="mouse-opacidade-logout" height="110px" width="205px" tile color="#770404">
+            <v-card-actions style="margin-left: 57px; margin-top: 4px; font-weight: bold; font-size: 15px; font-family: Arial">
+              LOG-OUT
             </v-card-actions>
           </v-card>
         </v-footer>
@@ -139,16 +139,7 @@
         <v-layout align-center justify-center column fill-height>
 
           <v-flex text-xs-center style=" font-size: 20px";>Emergency
-          </v-flex>
 
-          <v-flex text-xs-center> 
-          <img height=430px  width=436px src="@/assets/help-to-fill.png" alt="">
-          </v-flex> 
-
-          <v-flex text-xs-center style=" font-size: 16px";>Did you know one blood donation can save up to three lives?<br>Do something amazing. Give blood.
-          </v-flex>
-
-          <v-btn dark href="/" target="_blank" depressed :loading="loading" id="btn-login" style="width:250px" color="#770404" @click="loader = 'loading'">Become a donator right now</v-btn>
 
           </v-flex>
         </v-layout>
@@ -209,6 +200,11 @@
 
   .mouse-opacidade:hover{
       opacity: 0.7;
+      background: rgba(0 ,0 ,0, 0.5);
+  }
+
+  .mouse-opacidade-logout:hover{
+      opacity: 0.4;
       background: rgba(0 ,0 ,0, 0.5);
   }
 
