@@ -12,7 +12,7 @@
                   type="text"></v-text-field>
                 <v-text-field solo append-icon="lock" name="password" label="Senha" type="password"></v-text-field>
               </v-form>
-              <v-btn depressed :loading="loading" id="btn-login" class="px-0" block color="#00A230" @click="loader = 'loading'">Entrar</v-btn>
+              <v-btn href="home" depressed :loading="loading" id="btn-login" class="px-0" block color="#00A230" @click="loader = 'loading'">Entrar</v-btn>
 
 
               <v-card-text class="text1 text-xs-center">The blood you donate gives someone another chance at life.</v-card-text>
@@ -29,14 +29,14 @@
     <v-footer height="auto">
       <v-layout justify-center row wrap>
         <v-flex xs12>
-        <v-card height="53px" style="background: #383838;" flat tile class="lighten-1 white--text text-xs-center">
-          <v-card-text class="pt-2">
-          <img class="social-icon" id="social-icon" src="@/assets/facebook-grey.png" alt="">
-          <img class="social-icon" id="social-icon" src="@/assets/instagram-grey.png" alt="">
-          <img class="social-icon" id="social-icon" src="@/assets/twitter-grey.png" alt="">
-          <img class="social-icon" id="social-icon" src="@/assets/cellphone-grey.png" alt="">
-          </v-card-text>
-        </v-card>
+          <v-card height="53px" style="background: #383838;" flat tile class="lighten-1 white--text text-xs-center">
+            <v-card-text class="pt-2">
+            <img class="mouse-opacidade" id="social-icon" src="@/assets/facebook-grey.png" alt="">
+            <img class="mouse-opacidade" id="social-icon" src="@/assets/instagram-grey.png" alt="">
+            <img class="mouse-opacidade" id="social-icon" src="@/assets/twitter-grey.png" alt="">
+            <img class="mouse-opacidade" id="social-icon" src="@/assets/cellphone-grey.png" alt="">
+            </v-card-text>
+          </v-card>
         </v-flex>
        
         <v-flex style="background: #383838;" xs4 pl-2 >
@@ -120,7 +120,7 @@
    margin: 0 5px 0 5px;
   }  
 
-  .social-icon:hover{
+  .mouse-opacidade:hover{
       opacity: 0.5;
       filter: alpha(opacity=50);
   }

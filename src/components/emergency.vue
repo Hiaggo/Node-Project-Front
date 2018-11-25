@@ -52,7 +52,7 @@
       
       <v-list class="list__tile__title">
 
-        <v-list-tile class="mouse-opacidade-off" @click="">
+        <v-list-tile router to="/home" class="mouse-opacidade" @click="">
           <v-list-tile-action>
             <v-icon>home</v-icon>
           </v-list-tile-action>
@@ -61,7 +61,7 @@
           </v-list-tile-content>
         </v-list-tile>
 
-        <v-list-tile router to="/emergency" class="mouse-opacidade" @click="">
+        <v-list-tile class="mouse-opacidade-off" @click="">
           <v-list-tile-action>
             <v-icon>healing</v-icon>
           </v-list-tile-action>
@@ -138,7 +138,7 @@
       <v-container fluid fill-height>
         <v-layout align-center justify-center column fill-height>
 
-          <v-flex text-xs-center style=" font-size: 20px";>You don’t have to be a doctor to save lives
+          <v-flex text-xs-center style=" font-size: 20px";>Emergency
           </v-flex>
 
           <v-flex text-xs-center> 
