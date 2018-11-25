@@ -1,6 +1,6 @@
 <template>
     <v-app id="inspire">
-
+      
     <v-toolbar  height=61px color="#770404" dark extended fixed app>
       <v-toolbar-side-icon></v-toolbar-side-icon>
       <v-spacer></v-spacer>
@@ -18,14 +18,14 @@
       </v-btn>
 
       <v-toolbar-title slot="extension" style="text-align:right" class="white--text">
-
+    
         <v-flex style="background: #383838;">
           <v-card dark height="0px" tile flat color="#212121">
             <v-card-text class="text1">
               ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             </v-card-text>
           </v-card>
-        </v-flex>
+        </v-flex> 
 
         <v-card dark height=60 tile flat color="#770404">
           <v-card-text class="text-xs-right" style=" font-size: 13px">Welcome ser humaninho<br>IP Address: 192.168.1.1
@@ -49,28 +49,32 @@
       <v-card height=121px color="#600000">
         <img id="logo" style="margin-left: 55px" src="@/assets/logo.png" alt="">
       </v-card>
-
+      
       <v-list class="list__tile__title">
 
-        <v-list-tile class="mouse-opacidade">
+        <v-list-tile class="mouse-opacidade-off" @click="">
           <v-list-tile-action>
             <v-icon>home</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title >Home</v-list-tile-title>
+            <v-list-tile-title>Home</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
 
-        <v-list-tile class="mouse-opacidade">
+        <v-list-tile router to="/emergency" class="mouse-opacidade" @click="">
           <v-list-tile-action>
             <v-icon>healing</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title >Emergency</v-list-tile-title>
+            <v-list-tile-title 
+            router
+            to="/emergency">
+              Emergency
+            </v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
 
-        <v-list-tile class="mouse-opacidade">
+        <v-list-tile class="mouse-opacidade" @click="">
           <v-list-tile-action>
             <v-icon>hotel</v-icon>
           </v-list-tile-action>
@@ -79,7 +83,7 @@
           </v-list-tile-content>
         </v-list-tile>
 
-        <v-list-tile class="mouse-opacidade">
+        <v-list-tile class="mouse-opacidade" @click="">
           <v-list-tile-action>
             <v-icon>check_circle</v-icon>
           </v-list-tile-action>
@@ -88,7 +92,7 @@
           </v-list-tile-content>
         </v-list-tile>
 
-        <v-list-tile class="mouse-opacidade">
+        <v-list-tile class="mouse-opacidade" @click="">
           <v-list-tile-action>
             <v-icon>local_hospital</v-icon>
           </v-list-tile-action>
@@ -97,7 +101,7 @@
           </v-list-tile-content>
         </v-list-tile>
 
-        <v-list-tile class="mouse-opacidade">
+        <v-list-tile class="mouse-opacidade" @click="">
           <v-list-tile-action>
             <v-icon>settings</v-icon>
           </v-list-tile-action>
@@ -109,9 +113,9 @@
 
 
         <v-footer color="#600000" height=112px dark fixed >
-          <v-card dark height="110px" width="205px" tile color="#770404">
-            <v-card-actions>
-              <v-btn block href="/" flat >Log-out</v-btn>
+          <v-card dark router to="/" class="mouse-opacidade-logout" height="110px" width="205px" tile color="#770404">
+            <v-card-actions style="margin-left: 57px; margin-top: 4px; font-weight: bold; font-size: 15px; font-family: Arial">
+              LOG-OUT
             </v-card-actions>
           </v-card>
         </v-footer>
@@ -134,18 +138,19 @@
       <v-container fluid fill-height>
         <v-layout align-center justify-center column fill-height>
 
-          <v-flex text-xs-center style="font-size: 20px;">You don’t have to be a doctor to save lives
+          <v-flex text-xs-center style=" font-size: 20px";>You don’t have to be a doctor to save lives
           </v-flex>
 
-          <v-flex text-xs-center>
-          <img  width="436px" height="430px" src="@/assets/help-to-fill.png" alt="">
-          </v-flex>
+          <v-flex text-xs-center> 
+          <img height=430px  width=436px src="@/assets/help-to-fill.png" alt="">
+          </v-flex> 
 
-          <v-flex text-xs-center style="font-size: 16px;">Did you know one blood donation can save up to three lives?<br>Do something amazing. Give blood.
+          <v-flex text-xs-center style=" font-size: 16px";>Did you know one blood donation can save up to three lives?<br>Do something amazing. Give blood.
           </v-flex>
 
           <v-btn dark href="/" target="_blank" depressed :loading="loading" id="btn-login" style="width:250px" color="#770404" @click="loader = 'loading'">Become a donator right now</v-btn>
 
+          </v-flex>
         </v-layout>
       </v-container>
     </v-content>
@@ -156,19 +161,23 @@
 <script>
     export default {
         name: 'home',
-        data: () => ({
-            drawer: null
-        }),
+        data: () => {
+            return {
+              drawer: null
+
+
+            }
+        },
 
         props: {
             source: String
         }
     }
-
+    
 </script>
 
 <style scoped>
-
+  
   #btn-login {
     height: 45px;
     border-radius: 7px;
@@ -196,11 +205,21 @@
    height: 30px;
    width: 30;
    margin: 0 5px 0 5px;
-  }
+  }  
 
   .mouse-opacidade:hover{
       opacity: 0.7;
       background: rgba(0 ,0 ,0, 0.5);
+  }
+
+  .mouse-opacidade-logout:hover{
+      opacity: 0.4;
+      background: rgba(0 ,0 ,0, 0.5);
+  }
+
+  .mouse-opacidade-off{
+      opacity: 0.8;
+      background: rgba(0 ,0 ,0, 0.3);
   }
 
 </style>

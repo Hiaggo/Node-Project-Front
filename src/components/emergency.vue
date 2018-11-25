@@ -1,6 +1,10 @@
 <template>
     <v-app id="inspire">
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> ee770377c82d5238acb3da869de7b5d65cecae58
     <v-toolbar  height=61px color="#770404" dark extended fixed app>
       <v-toolbar-side-icon></v-toolbar-side-icon>
       <v-spacer></v-spacer>
@@ -18,14 +22,22 @@
       </v-btn>
 
       <v-toolbar-title slot="extension" style="text-align:right" class="white--text">
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> ee770377c82d5238acb3da869de7b5d65cecae58
         <v-flex style="background: #383838;">
           <v-card dark height="0px" tile flat color="#212121">
             <v-card-text class="text1">
               ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             </v-card-text>
           </v-card>
+<<<<<<< HEAD
         </v-flex>
+=======
+        </v-flex> 
+>>>>>>> ee770377c82d5238acb3da869de7b5d65cecae58
 
         <v-card dark height=60 tile flat color="#770404">
           <v-card-text class="text-xs-right" style=" font-size: 13px">Welcome ser humaninho<br>IP Address: 192.168.1.1
@@ -49,28 +61,55 @@
       <v-card height=121px color="#600000">
         <img id="logo" style="margin-left: 55px" src="@/assets/logo.png" alt="">
       </v-card>
+<<<<<<< HEAD
 
       <v-list class="list__tile__title">
 
         <v-list-tile class="mouse-opacidade">
+=======
+      
+      <v-list class="list__tile__title">
+
+        <v-list-tile router to="/home" class="mouse-opacidade" @click="">
+>>>>>>> ee770377c82d5238acb3da869de7b5d65cecae58
           <v-list-tile-action>
             <v-icon>home</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
+<<<<<<< HEAD
             <v-list-tile-title >Home</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
 
         <v-list-tile class="mouse-opacidade">
+=======
+            <v-list-tile-title>Home</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+
+        <v-list-tile class="mouse-opacidade-off" @click="">
+>>>>>>> ee770377c82d5238acb3da869de7b5d65cecae58
           <v-list-tile-action>
             <v-icon>healing</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
+<<<<<<< HEAD
             <v-list-tile-title >Emergency</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
 
         <v-list-tile class="mouse-opacidade">
+=======
+            <v-list-tile-title 
+            router
+            to="/emergency">
+              Emergency
+            </v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+
+        <v-list-tile class="mouse-opacidade" @click="">
+>>>>>>> ee770377c82d5238acb3da869de7b5d65cecae58
           <v-list-tile-action>
             <v-icon>hotel</v-icon>
           </v-list-tile-action>
@@ -79,7 +118,11 @@
           </v-list-tile-content>
         </v-list-tile>
 
+<<<<<<< HEAD
         <v-list-tile class="mouse-opacidade">
+=======
+        <v-list-tile class="mouse-opacidade" @click="">
+>>>>>>> ee770377c82d5238acb3da869de7b5d65cecae58
           <v-list-tile-action>
             <v-icon>check_circle</v-icon>
           </v-list-tile-action>
@@ -88,7 +131,11 @@
           </v-list-tile-content>
         </v-list-tile>
 
+<<<<<<< HEAD
         <v-list-tile class="mouse-opacidade">
+=======
+        <v-list-tile class="mouse-opacidade" @click="">
+>>>>>>> ee770377c82d5238acb3da869de7b5d65cecae58
           <v-list-tile-action>
             <v-icon>local_hospital</v-icon>
           </v-list-tile-action>
@@ -97,7 +144,11 @@
           </v-list-tile-content>
         </v-list-tile>
 
+<<<<<<< HEAD
         <v-list-tile class="mouse-opacidade">
+=======
+        <v-list-tile class="mouse-opacidade" @click="">
+>>>>>>> ee770377c82d5238acb3da869de7b5d65cecae58
           <v-list-tile-action>
             <v-icon>settings</v-icon>
           </v-list-tile-action>
@@ -109,9 +160,15 @@
 
 
         <v-footer color="#600000" height=112px dark fixed >
+<<<<<<< HEAD
           <v-card dark height="110px" width="205px" tile color="#770404">
             <v-card-actions>
               <v-btn block href="/" flat >Log-out</v-btn>
+=======
+          <v-card dark router to="/" class="mouse-opacidade-logout" height="110px" width="205px" tile color="#770404">
+            <v-card-actions style="margin-left: 57px; margin-top: 4px; font-weight: bold; font-size: 15px; font-family: Arial">
+              LOG-OUT
+>>>>>>> ee770377c82d5238acb3da869de7b5d65cecae58
             </v-card-actions>
           </v-card>
         </v-footer>
@@ -131,6 +188,7 @@
     </v-navigation-drawer>
 
     <v-content>
+<<<<<<< HEAD
       <v-container>
         <v-layout fill-height>
           <v-flex xs12 align-end flexbox>
@@ -210,6 +268,15 @@
                 </td>
               </template>
             </v-data-table>
+=======
+      <v-container fluid fill-height>
+        <v-layout align-center justify-center column fill-height>
+
+          <v-flex text-xs-center style=" font-size: 20px";>Emergency
+
+
+          </v-flex>
+>>>>>>> ee770377c82d5238acb3da869de7b5d65cecae58
         </v-layout>
       </v-container>
     </v-content>
@@ -218,6 +285,7 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 export default {
     data: () => ({
       dialog: false,
@@ -312,6 +380,40 @@ export default {
   #tabelinha {
     width: 1077px;
     height: 730px;
+=======
+    export default {
+        name: 'home',
+        data: () => {
+            return {
+              drawer: null
+
+
+            }
+        },
+
+        props: {
+            source: String
+        }
+    }
+    
+</script>
+
+<style scoped>
+  
+  #btn-login {
+    height: 45px;
+    border-radius: 7px;
+    text-transform: none;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fefcfc;
+>>>>>>> ee770377c82d5238acb3da869de7b5d65cecae58
   }
 
   #logo {
@@ -326,11 +428,29 @@ export default {
    height: 30px;
    width: 30;
    margin: 0 5px 0 5px;
+<<<<<<< HEAD
   }
+=======
+  }  
+>>>>>>> ee770377c82d5238acb3da869de7b5d65cecae58
 
   .mouse-opacidade:hover{
       opacity: 0.7;
       background: rgba(0 ,0 ,0, 0.5);
   }
 
+<<<<<<< HEAD
 </style>
+=======
+  .mouse-opacidade-logout:hover{
+      opacity: 0.4;
+      background: rgba(0 ,0 ,0, 0.5);
+  }
+
+  .mouse-opacidade-off{
+      opacity: 0.8;
+      background: rgba(0 ,0 ,0, 0.3);
+  }
+
+</style>
+>>>>>>> ee770377c82d5238acb3da869de7b5d65cecae58
