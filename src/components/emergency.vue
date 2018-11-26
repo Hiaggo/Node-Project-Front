@@ -213,12 +213,13 @@
               prev-icon="keyboard_arrow_left"
               next-icon="keyboard_arrow_right"
               sort-icon="keyboard_arrow_down"
+              page-icon="keyboard_arrow_down"
             >
               <template slot="items" slot-scope="props">
                 <td>{{ props.item.name }}</td>
-                <td class="text-xs-right">{{ props.item.age }}</td>
+                <td class="text-xs-center">{{ props.item.age }}</td>
                 <td class="text-xs-right">{{ props.item.cardio }}</td>
-                <td class="text-xs-right">{{ props.item.temperature }}</td>
+                <td class="text-xs-center">{{ props.item.temperature }}</td>
                 <td class="text-xs-right">{{ props.item.time }}</td>
                 <td class="justify-center layout px-0">
                   
@@ -234,9 +235,28 @@
                 </td>
               </template>
               <template slot="footer">
-                <td :colspan="headers.length">
-                  <strong>This is an extra footer</strong>
-                </td>
+                  <td :colspan="headers.length">
+                    <v-layout justify-space-around row>  
+                      <v-card-action >
+                        <v-icon style="background: #388E3C;" flat>n
+                        </v-icon>
+                        - Can wait forever and ever
+                      </v-card-action>
+
+                      <v-card-action>
+                        <v-icon style="background: #FBC02D;" flat>n
+                        </v-icon>
+                        - Moderate risk of life
+                      </v-card-action>
+                      
+                      <v-card-action>
+                        <v-icon style="background: #B71C1C;" flat>n
+                        </v-icon>
+                        - RIsk of imminent death
+                      </v-card-action>
+
+                    </v-layout>
+                  </td>
               </template>
               <template slot="no-data">
                 <v-btn color="#e0d8ce" @click="initialize">Reset</v-btn>
