@@ -60,6 +60,7 @@
             <v-list-tile-title>Home</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
+        <v-divider id="divider"></v-divider>
 
         <v-list-tile router to="/emergency" class="mouse-opacidade" @click="">
           <v-list-tile-action>
@@ -73,7 +74,8 @@
             </v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-
+        <v-divider id="divider"></v-divider>
+        
         <v-list-tile class="mouse-opacidade" @click="">
           <v-list-tile-action>
             <v-icon>hotel</v-icon>
@@ -82,7 +84,8 @@
             <v-list-tile-title>Patient</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-
+        <v-divider id="divider"></v-divider>
+        
         <v-list-tile class="mouse-opacidade" @click="">
           <v-list-tile-action>
             <v-icon>check_circle</v-icon>
@@ -91,7 +94,8 @@
             <v-list-tile-title>Discharged</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-
+        <v-divider id="divider"></v-divider>
+        
         <v-list-tile class="mouse-opacidade" @click="">
           <v-list-tile-action>
             <v-icon>local_hospital</v-icon>
@@ -100,7 +104,8 @@
             <v-list-tile-title>Blood Stock</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-
+        <v-divider id="divider"></v-divider>
+        
         <v-list-tile class="mouse-opacidade" @click="">
           <v-list-tile-action>
             <v-icon>settings</v-icon>
@@ -109,6 +114,8 @@
             <v-list-tile-title>Profile</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
+        <v-divider id="divider"></v-divider>
+
 
 
 
@@ -138,14 +145,14 @@
       <v-container fluid fill-height>
         <v-layout align-center justify-center column fill-height>
 
-          <v-flex text-xs-center style=" font-size: 20px";>You don’t have to be a doctor to save lives
+          <v-flex text-xs-center style=" font-size: 22px; color: #6c6c6c; font-weight: bold;">You don’t have to be a doctor to save lives
           </v-flex>
 
           <v-flex text-xs-center> 
           <img height=430px  width=436px src="@/assets/help-to-fill.png" alt="">
           </v-flex> 
 
-          <v-flex text-xs-center style=" font-size: 16px";>Did you know one blood donation can save up to three lives?<br>Do something amazing. Give blood.
+          <v-flex text-xs-center style=" font-size: 16px; color: #6c6c6c; font-weight: bold;">Did you know one blood donation can save up to three lives?<br>Do something amazing. Give blood.
           </v-flex>
 
           <v-btn dark href="/" target="_blank" depressed :loading="loading" id="btn-login" style="width:250px" color="#770404" @click="loader = 'loading'">Become a donator right now</v-btn>
@@ -177,7 +184,10 @@
 </script>
 
 <style scoped>
-  
+  #divider{
+    border-color: #5e0000;
+  }
+
   #btn-login {
     height: 45px;
     border-radius: 7px;
