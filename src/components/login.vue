@@ -60,7 +60,7 @@
                     <v-card-text class="footer_text text-xs-left pt-0">Cellphone: (21)92222-2011
                       <br>Whatsapp: (21)91111-4022
                       <br>
-                      <br>contact@id.uf.br
+                      <br>contact@id.uff.br
                     </v-card-text>
                   </v-card>
                 </v-flex>
