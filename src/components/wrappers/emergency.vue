@@ -2,57 +2,261 @@
   <!-- WRAPPER -->
   <v-content class="mt-3">
     <v-container fluid fill-height style="background-color: #FFFFFF;">
-      <v-layout align-center justify-center column fill-height>
-        <v-flex>
-          <div text-xs-center style="font-size: 22px; color: #6c6c6c; font-weight: bold;">hehehe</div>
+      <v-layout row wrap>
+        <v-flex xs12>
+          <v-card flat>
+            <v-card-text class="header pl-0">List of all patients in the waiting room</v-card-text>
+          </v-card>
+          <div class="divider mb-5"></div>
         </v-flex>
-  
-  
-  
-        <v-flex>
-          <div id="text2">Did you know one blood donation can save up to three lives?</div>
-          <div id="text2" class="my-3 text-xs-center">Do something amazing. Give blood.</div>
-        </v-flex>
-        <v-flex>
-          <v-btn id="btn-donator" href="/" target="_blank" depressed>Become a donator right now</v-btn>
+        <v-flex xs12>
+          <div>
+            <v-toolbar flat color="#F7F7F7">
+              <v-toolbar-title class="header">#</v-toolbar-title>
+              <v-spacer></v-spacer>
+              <v-dialog v-model="dialog" max-width="500px">
+                <v-card>
+                  <v-card-title>
+                    <span class="headline">{{ formTitle }}</span>
+                  </v-card-title>
+
+                  <v-card-text>
+                    <v-container grid-list-md>
+                      <v-layout wrap>
+                        <v-flex xs12>
+                          <v-text-field v-model="editedItem.name" label="Name"></v-text-field>
+                        </v-flex>
+                        <v-flex xs12>
+                          <v-text-field v-model="editedItem.age" label="Age"></v-text-field>
+                        </v-flex>
+                      </v-layout>
+                    </v-container>
+                  </v-card-text>
+
+                  <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn color="blue darken-1" flat @click="close">Cancel</v-btn>
+                    <v-btn color="blue darken-1" flat @click="save">Save</v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-dialog>
+            </v-toolbar>
+            <v-data-table :headers="headers" :items="waiting" class="elevation-1">
+              <template slot="items" slot-scope="props">
+                <td class="text-xs-left texttable">{{ props.item.name }}</td>
+                <td class="text-xs-left texttable">{{ props.item.age }}</td>
+                <td class="text-xs-left texttable">{{ props.item.heart_rate }}</td>
+                <td class="text-xs-left texttable">{{ props.item.temperature }}</td>
+                <td class="text-xs-left texttable">{{ props.item.arrival_time }}</td>
+                <td class="text-xs-left texttable">{{ props.item.priority }}</td>
+                <td class="text-xs-center layout px-0">
+                  <v-icon small class="pl-3 mr-2" @click="editItem(props.item)">local_hospital</v-icon>
+                  <v-icon small class="mr-2" @click="editItem(props.item)">edit</v-icon>
+                  <v-icon small @click="deleteItem(props.item)">delete</v-icon>
+                </td>
+              </template>
+              <template slot="no-data">
+                <v-btn color="primary" @click="initialize">Reset</v-btn>
+              </template>
+            </v-data-table>
+          </div>
         </v-flex>
       </v-layout>
     </v-container>
   </v-content>
-  
   <!-- END WRAPPER -->
 </template>
 
 <script>
-  
+export default {
+  data: () => ({
+    dialog: false,
+    headers: [
+      {
+        text: "Fullname",
+        align: "left",
+        class: "grey--text text--lighten-1",
+        sortable: false,
+        value: "name"
+      },
+      {
+        text: "Age",
+        align: "left",
+        class: "grey--text text--lighten-1",
+        sortable: false,
+        value: "age"
+      },
+      {
+        text: "Cardio",
+        align: "left",
+        class: "grey--text text--lighten-1",
+        sortable: false,
+        value: "cardio"
+      },
+      {
+        text: "Temperature",
+        align: "left",
+        class: "grey--text text--lighten-1",
+        sortable: false,
+        value: "temperature"
+      },
+      {
+        text: "Arrival Time",
+        align: "left",
+        class: "grey--text text--lighten-1",
+        sortable: false,
+        value: "arrival_time"
+      },
+      {
+        text: "Priority",
+        align: "left",
+        class: "grey--text text--lighten-1",
+        sortable: false,
+        value: "priority"
+      },
+      {
+        text: "Actions",
+        align: "left",
+        class: "grey--text text--lighten-1",
+        sortable: false,
+        value: "actions"
+      }
+    ],
+    waiting: [],
+    editedIndex: -1,
+    editedItem: {
+      name: "",
+      age: 0,
+      heart_rate: "",
+      temperature: "",
+      arrival_time: "",
+      priority: 0
+    },
+    defaultItem: {
+      name: "",
+      age: 0,
+      heart_rate: "",
+      temperature: "",
+      arrival_time: "",
+      priority: 0
+    }
+  }),
+
+  computed: {
+    formTitle() {
+      return this.editedIndex === -1 ? "New Item" : "Edit Item";
+    }
+  },
+
+  watch: {
+    dialog(val) {
+      val || this.close();
+    }
+  },
+
+  created() {
+    this.initialize();
+  },
+
+  methods: {
+    initialize() {
+      this.waiting = [
+        {
+          name: "Leonardo Machado",
+          age: 22,
+          heart_rate: "60bpm",
+          temperature: "38ºC",
+          arrival_time: "19/11/2018 - 16:11",
+          priority: 1
+        },
+        {
+          name: "Teste 1",
+          age: 22,
+          heart_rate: "60bpm",
+          temperature: "38ºC",
+          arrival_time: "19/11/2018 - 16:11",
+          priority: 1
+        },
+        {
+          name: "Teste 2",
+          age: 22,
+          heart_rate: "60bpm",
+          temperature: "38ºC",
+          arrival_time: "19/11/2018 - 16:11",
+          priority: 1
+        },
+        {
+          name: "Teste 3",
+          age: 22,
+          heart_rate: "60bpm",
+          temperature: "38ºC",
+          arrival_time: "19/11/2018 - 16:11",
+          priority: 1
+        }
+      ];
+    },
+
+    editItem(item) {
+      this.editedIndex = this.waiting.indexOf(item);
+      this.editedItem = Object.assign({}, item);
+      this.dialog = true;
+    },
+
+    deleteItem(item) {
+      const index = this.waiting.indexOf(item);
+      confirm("Are you sure you want to delete this person?") &&
+        this.waiting.splice(index, 1);
+    },
+
+    close() {
+      this.dialog = false;
+      setTimeout(() => {
+        this.editedItem = Object.assign({}, this.defaultItem);
+        this.editedIndex = -1;
+      }, 300);
+    },
+
+    save() {
+      if (this.editedIndex > -1) {
+        Object.assign(this.waiting[this.editedIndex], this.editedItem);
+      } else {
+        this.waiting.push(this.editedItem);
+      }
+      this.close();
+    }
+  }
+};
 </script>
 
 <style scoped>
-  #btn-donator {
-    height: 45px;
-    border-radius: 7px;
-    text-transform: none;
-    font-family: Arial;
-    font-size: 14px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
-    color: #fefcfc;
-    background-color: #b2000d;
-  }
+.header {
+  font-family: Arial;
+  font-size: 22px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #6c6c6c;
+}
+
+.divider {
+  width: 400px;
+  height: 1px;
+  background-color: #6a0000;
+}
+
+.texttable {
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #8a8888;
   
-  #text2 {
-    font-family: Arial;
-    font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
-    color: #6c6c6c;
-  }
+}
 </style>

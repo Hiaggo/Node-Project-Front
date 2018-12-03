@@ -47,8 +47,8 @@
 
             <v-flex xs4>
               <v-card color="transparent" flat>
-                <v-card-text class="subheader pl-0">Classification:</v-card-text>
-                <v-checkbox v-model="ex4" label="Non-Urgent" color="blue" value="blue" hide-details></v-checkbox>
+                <v-card-text class="subheader pl-0 pb-3">Classification:</v-card-text>
+                <v-checkbox class="mt-0 pt-0" v-model="ex4" label="Non-Urgent" color="blue" value="blue" hide-details></v-checkbox>
                 <v-checkbox v-model="ex4" label="Standard" color="green" value="green" hide-details></v-checkbox>
                 <v-checkbox v-model="ex4" label="Urgent" color="yellow" value="yellow" hide-details></v-checkbox>
                 <v-checkbox
@@ -73,7 +73,7 @@
         <v-flex xs12>
           <v-card flat class="text-xs-right">
             <v-btn color="#00A230" class="btn-mts" href="/" target="_blank" depressed>Register</v-btn>
-              <v-btn color="#B20009" class="btn-mts" href="/" target="_blank" depressed>Cancel</v-btn>
+              <v-btn color="#B20009" class="btn-mts mr-5" href="/" target="_blank" depressed>Cancel</v-btn>
           </v-card>
           
               
