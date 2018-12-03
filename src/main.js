@@ -24,7 +24,7 @@ new Vue({
   router,
   watch: {
     '$route'(to, from) {
-      this.$root.$emit('updateWrapper', to);
+      this.$root.$emit('updateWrapper');
     }
   },
   render: h => h(App),

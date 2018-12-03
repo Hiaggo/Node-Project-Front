@@ -15,7 +15,7 @@
           <!-- END HEADER -->
           <!-- WRAPPER -->
           <v-flex>
-            <component :is="this.wrapper" />
+            <component :is="this.wrapper"/>
           </v-flex>
           <!-- END WRAPPER -->
         </v-layout>
@@ -33,12 +33,12 @@
     },
     computed: {
       loader() {
-        return () => System.import(`@/components/` + this.$route.name + `_wrapper`);
+        return () => System.import(`@/components/wrappers/` + this.$route.name);
       }
     },
   
     mounted() {
-      this.$root.$on("updateWrapper", (to) => {
+      this.$root.$on("updateWrapper", () => {
         this.wrapper = () => this.loader();
         }),
 
@@ -48,12 +48,11 @@
         })
         .catch(() => {
           this.wrapper = () =>
-            import ("@/components/home_wrapper");
+            import ("@/components/wrappers/under_construction");
         });
     }
   };
 </script>
 
 <style scoped>
-  
 </style>

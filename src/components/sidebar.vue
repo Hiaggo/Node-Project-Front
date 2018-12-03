@@ -14,7 +14,7 @@
         v-for="item in items"
         :key="item.title"
         :to="item.path"
-        active-class
+        active-class=""
         :class="item.path === $route.path ? 'sidebar_highlighted' : ''"
       >
         <v-list-tile-action>
