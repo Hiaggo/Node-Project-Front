@@ -33,7 +33,7 @@
     },
     computed: {
       loader() {
-        return () => System.import(`@/components/wrappers/` + this.$route.name);
+        return () => import(`@/components/wrappers/` + this.$route.name);
       }
     },
   

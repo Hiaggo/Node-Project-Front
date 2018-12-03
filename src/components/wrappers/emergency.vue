@@ -48,7 +48,9 @@
                 <td class="text-xs-left texttable">{{ props.item.heart_rate }}</td>
                 <td class="text-xs-left texttable">{{ props.item.temperature }}</td>
                 <td class="text-xs-left texttable">{{ props.item.arrival_time }}</td>
-                <td class="text-xs-left texttable">{{ props.item.priority }}</td>
+                <td class>
+                  <div :class="props.item.priority"></div>
+                </td>
                 <td class="text-xs-center layout px-0">
                   <v-icon small class="pl-3 mr-2" @click="editItem(props.item)">local_hospital</v-icon>
                   <v-icon small class="mr-2" @click="editItem(props.item)">edit</v-icon>
@@ -73,7 +75,7 @@ export default {
     dialog: false,
     headers: [
       {
-        text: "Fullname",
+        text: "Full name",
         align: "left",
         class: "grey--text text--lighten-1",
         sortable: false,
@@ -109,7 +111,7 @@ export default {
       },
       {
         text: "Priority",
-        align: "left",
+        align: "center",
         class: "grey--text text--lighten-1",
         sortable: false,
         value: "priority"
@@ -167,7 +169,7 @@ export default {
           heart_rate: "60bpm",
           temperature: "38ºC",
           arrival_time: "19/11/2018 - 16:11",
-          priority: 1
+          priority: "priority priority-red"
         },
         {
           name: "Teste 1",
@@ -175,7 +177,7 @@ export default {
           heart_rate: "60bpm",
           temperature: "38ºC",
           arrival_time: "19/11/2018 - 16:11",
-          priority: 1
+          priority: "priority priority-orange"
         },
         {
           name: "Teste 2",
@@ -183,7 +185,7 @@ export default {
           heart_rate: "60bpm",
           temperature: "38ºC",
           arrival_time: "19/11/2018 - 16:11",
-          priority: 1
+          priority: "priority priority-yellow"
         },
         {
           name: "Teste 3",
@@ -191,7 +193,15 @@ export default {
           heart_rate: "60bpm",
           temperature: "38ºC",
           arrival_time: "19/11/2018 - 16:11",
-          priority: 1
+          priority: "priority priority-green"
+        },
+        {
+          name: "Teste 3",
+          age: 22,
+          heart_rate: "60bpm",
+          temperature: "38ºC",
+          arrival_time: "19/11/2018 - 16:11",
+          priority: "priority priority-blue"
         }
       ];
     },
@@ -229,6 +239,33 @@ export default {
 </script>
 
 <style scoped>
+.priority {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+}
+
+.priority-red {
+  background-color: #ff0000;
+}
+
+.priority-orange {
+  background-color: #ff7e00;
+}
+
+.priority-yellow {
+  background-color: #ffea00;
+}
+
+.priority-green {
+  background-color: #199e31;
+}
+
+.priority-blue {
+  background-color: #0081b8;
+}
+
+
 .header {
   font-family: Arial;
   font-size: 22px;
@@ -257,6 +294,5 @@ export default {
   letter-spacing: normal;
   text-align: left;
   color: #8a8888;
-  
 }
 </style>
