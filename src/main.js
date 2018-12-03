@@ -5,14 +5,27 @@ import Vuetify from 'vuetify'
 import App from './App.vue'
 import router from './router'
 
+import header from '@/components/header'
+import sidebar from '@/components/sidebar'
+
+import base from '@/components/base'
+
 Vue.config.productionTip = false
 
 Vue.use(Vuetify, {
   iconfont: 'mdi' // 'md' || 'mdi' || 'fa' || 'fa4'
 })
 
+Vue.component('my-header', header);
+Vue.component('my-sidebar', sidebar);
+
+
 new Vue({
   router,
+  watch: {
+    '$route'(to, from) {
+      this.$root.$emit('updateWrapper', to);
+    }
+  },
   render: h => h(App),
 }).$mount('#app')
-
