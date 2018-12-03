@@ -27,14 +27,18 @@
       </v-list-tile>
     </v-list>
 
-    <v-footer color="#630007" class="justify-center pl-0" inset app>
-      <span>&copy; 2018</span>
+    <v-footer height="50px" color="#630007" class="justify-center pr-4" inset app>
+      <img class="social-icon" src="@/assets/facebook.png" alt>
+              <img class="social-icon" src="@/assets/instagram.png" alt>
+              <img class="social-icon" src="@/assets/twitter.png" alt>
+              <img class="social-icon" src="@/assets/cellphone.png" alt>
+      
+
     </v-footer>
   </v-navigation-drawer>
 </template>
 
 <script>
-import Base from "@/components/base";
 
 export default {
   name: "sidebar",
@@ -94,6 +98,20 @@ export default {
   height: 85px;
   margin: 0 auto;
 }
+
+ .social-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  
+  .social-icon:hover {
+    cursor: pointer;
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
 
 .sidebar {
   border-bottom: #630007 1px solid;
